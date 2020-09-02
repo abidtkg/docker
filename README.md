@@ -13,7 +13,7 @@ Stop a Docker Container
 
 Remove a Docker Image
 
-        docker rmi Image imageName
+        docker image rm imageName
         DOC: https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 
 Permisson Issue
@@ -23,3 +23,15 @@ Permisson Issue
 
     solve:
     sudo chmod 666 /var/run/docker.sock
+
+Create A Docker Container
+
+    docker run -d -t --name "container-name" imageName
+
+Commit As A Container To Image
+    
+    docker commit containerId username/repoName
+
+Stop And Remove Container
+
+    docker stop dynamiContainerName; docekr rm containerId
